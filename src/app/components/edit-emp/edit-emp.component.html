@@ -1,0 +1,39 @@
+<a class="signout_link" routerLink="/signout">Signout</a>
+<div class="m-l-20 form-div mat-elevation-z8">
+    <h3>Edit Employee</h3>
+
+    <form [formGroup]="editEmployeeForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label for="first-name">First Name: </mat-label>
+            <input matInput placeholder="First Name" id="first-name" type="text" formControlName="firstName">
+            <mat-error *ngIf="hasError('firstName', 'required')">First Name is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label for="last-name">Last Name: </mat-label>
+            <input matInput placeholder="Last Name" id="last-name" type="text" formControlName="lastName">
+            <mat-error *ngIf="hasError('lastName', 'required')">Last Name is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label for="last-name">Mobile Number: </mat-label>
+            <input matInput placeholder="Mobile Number" id="last-name" type="text" formControlName="mobileNo">
+            <mat-error *ngIf="hasError('mobileNo', 'required')">Mobile Number is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label for="last-name">Email: </mat-label>
+            <input matInput placeholder="Email" id="last-name" type="text" formControlName="email">
+            <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+            <mat-error *ngIf="hasError('email', 'email')">Provide valid email address</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-label>Is Active? </mat-label>
+        <mat-slide-toggle formControlName="isActive"></mat-slide-toggle>
+        <br>
+        <p>
+            <button mat-raised-button type="submit" [disabled]="!editEmployeeForm.valid">Submit</button>
+            <button mat-raised-button class="m-l-10" (click)="cancelClick()">Cancel</button>
+        </p>
+    </form>
+</div>

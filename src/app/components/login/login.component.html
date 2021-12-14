@@ -1,0 +1,28 @@
+<div class="m-l-20 form-div mat-elevation-z8">
+    <h3>Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label for="username">Username: </mat-label>
+            <input matInput placeholder="Username" id="username" type="text" formControlName="username">
+            <mat-error *ngIf="hasError('username', 'required')">Username is required</mat-error>
+            <mat-error *ngIf="hasError('username', 'email')">Provide valid email address</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label for="password">Password: </mat-label>
+            <input matInput placeholder="Password" id="Password" type="password" formControlName="password">
+            <mat-error *ngIf="hasError('password', 'required')">Username is required</mat-error>
+        </mat-form-field>
+        <br>
+        <!-- <mat-form-field appearance="fill">
+            <mat-checkbox formControlName="rememberme">Remember Me:</mat-checkbox>
+        </mat-form-field> -->
+        <br>
+        <button mat-raised-button type="submit" [disabled]="!loginForm.valid">Submit</button>
+
+    </form>
+    <p>
+        <a class="add_emp_link" routerLink="/register">Register</a>
+        <a class="forgot_pwd_link" routerLink="/forgotpassword">Forgot Password</a>
+    </p>
+</div>

@@ -1,0 +1,41 @@
+<div class="m-l-20 form-div mat-elevation-z8">
+    <h3>Forgot Password</h3>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label for="email">Email: </mat-label>
+            <input matInput placeholder="Email" id="email" type="text" [formControl]="email">
+            <mat-error *ngIf="hasError( 'required')">Email is required</mat-error>
+            <mat-error *ngIf="hasError('email')">Provide valid email address</mat-error>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button type="submit" (click)="onSubmit()" [disabled]="!email.valid">Submit</button>
+        <br>
+        <p *ngIf="isResetLinkPresent">
+            Reset Password <a class="add_emp_link" [routerLink]="['/resetpassword']"
+                [queryParams]="queryparams">Here</a>
+        </p>
+    </div>
+    <p>
+        <a routerLink="/login">Login</a>
+    </p>
+</div>
+<!-- <div>
+    <mat-card class="mat-elevation-z8">
+        <mat-card-header>
+            <mat-card-title>Forgot Password</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label for="email">Email: </mat-label>
+                <input matInput placeholder="Email" id="email" type="text" [formControl]="email">
+                <mat-error *ngIf="hasError( 'required')">Email is required</mat-error>
+                <mat-error *ngIf="hasError('email')">Provide valid email address</mat-error>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button type="submit" (click)="onSubmit()" [disabled]="!email.valid">Submit</button>
+            <br>
+        </mat-card-content>
+        <mat-divider inset></mat-divider>
+        <a routerLink="/login">Login</a>
+    </mat-card>
+</div> -->

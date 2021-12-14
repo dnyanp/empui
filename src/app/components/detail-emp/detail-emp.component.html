@@ -1,0 +1,29 @@
+<a class="signout_link" routerLink="/signout">Signout</a>
+<div class="m-l-20 form-div mat-elevation-z8">
+    <h3>Employee Details</h3>
+    <mat-form-field appearance="fill">
+        <mat-label>First Name: </mat-label>
+        <input matInput [readonly]="true" placeholder="First Name" type="text" [formControl]="firstName">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Last Name: </mat-label>
+        <input matInput [readonly]="true" placeholder="Last Name" type="text" [formControl]="lastName">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Mobile Number: </mat-label>
+        <input matInput [readonly]="true" placeholder="Mobile Number" type="text" [formControl]="mobileNo">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Email: </mat-label>
+        <input matInput [readonly]="true" placeholder="Email" readOnly type="text" [formControl]="email">
+    </mat-form-field>
+    <br>
+    <mat-label>Is Active? </mat-label>
+    <mat-slide-toggle [formControl]="isActive" [disabled]="true"></mat-slide-toggle>
+    <br>
+    <br>
+    <a routerLink="/">List of Employees</a>
+</div>

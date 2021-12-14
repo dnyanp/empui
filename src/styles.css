@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+html,body{
+    height: 100%;
+    background-color: #e6e3e3;
+}
+
+.m-l-20{
+    margin-left: 20%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.signout_link{
+    float: right;
+    margin-right: 5%;
+}
+
+.form-div{
+    width:40%;
+    background-color: whitesmoke;
+    padding: 20px 10% 10px 10%;
+}
+
+.form-div > .mat-form-field{
+    width: 80%;
+}

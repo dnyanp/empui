@@ -1,0 +1,17 @@
+.employee-list {
+    width: 90%;
+    margin-left: 5%;    
+    margin-top: 15px;
+  }
+
+table {
+  width: 100%;    
+}
+
+.m-l-10{
+  margin-left: 10px;
+}
+
+.add_emp_link{
+  margin: 5% auto 20px 5%;
+}
